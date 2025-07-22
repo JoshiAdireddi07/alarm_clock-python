@@ -1,0 +1,12 @@
+import time
+import os
+
+alarm_time = input("Enter time in HH:MM:SS format: ")
+
+while True:
+    current_time = time.strftime("%H:%M:%S")
+    if current_time == alarm_time:
+        print("Wake up!")
+        os.system("say 'Wake up!'")  # macOS only
+        break
+    time.sleep(1)
